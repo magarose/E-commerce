@@ -48,35 +48,37 @@ router.get('/api/items', function (req, res) {
         const id = req.params.id;
         let product = {};
         let productDescription = {};
-        axios.get('https://api.mercadolibre.com/items/' + id)
-        .then(result => {
-            product = result.data;
-            return axios.get('https://api.mercadolibre.com/items/' + id + '/description')
-            })
-            .then(result => {
-               productDescription = result.data;
-               const category = product.category_id;
-               return axios.get('https://api.mercadolibre.com/categories/' + category)
-            })
-            .then(resultCategory => {
-                let resultProduct = {
-                  categories:[resultCategory.data.path_from_root],
-                  item: {
-                    id: product.id,
-                    title: product.title,
-                    price: {
-                      currency: product.currency_id,
-                      amount: String(product.price).split('.')[0],
-                      decimals: String(product.price).split('.')[1] || '0',
-                    },
-                    picture: product.thumbnail,
-                    condition: product.condition,
-                    free_shipping: product.shipping.free_shipping,
-                    sold_quantity: product.sold_quantity,
-                    description: productDescription.plain_text
-                  }
-                }
-                res.json(resultProduct)
+        axios
+       .get('https://api.mercadolibre.com/items/' + id)
+       .then(result => {
+           product = result.data;
+           return axios.get('https://api.mercadolibre.com/items/' + id + '/description')
+           })
+           .then(result => {
+              productDescription = result.data;
+              const category = product.category_id;
+              return axios.get('https://api.mercadolibre.com/categories/' + category)
+           })
+           .then(resultCategory => {
+               let resultProduct = {
+                 categories:[resultCategory.data.path_from_root],
+                 item: {
+                   id: product.id,
+                   title: product.title,
+                   price: {
+                     currency: product.currency_id,
+                     amount: String(product.price.amount).split('.')[0],
+                     decimals:String(product.price.decimals).split('.')[1] || '0',
+                   },
+                   picture: product.thumbnail,
+                   condition: product.condition,
+                   free_shipping: product.shipping.free_shipping,
+                   sold_quantity: product.sold_quantity,
+                   description: productDescription.plain_text
+                 }
+               }
+
+               res.json(resultProduct);
         })
     })
 

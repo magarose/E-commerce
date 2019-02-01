@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
+import truck from './assets/Icono_Envio.png'
 
 class Products extends Component {
     constructor(props) {
@@ -31,9 +32,9 @@ class Products extends Component {
         const productos = this.state.items.map((l) =>
             <div>
                 <div>
-                    <img src={l.thumbnail} />
+                 <img src={l.thumbnail} />
                 </div>
-                <p>$ {l.price.amount}, <span> {l.price.decimals}</span></p>
+                <p>$ {l.price.amount}, <span> {l.price.decimals}</span> <span>{l.free_shipping && <img src={truck}></img>} </span></p>
                 <p>{l.title}</p>
                 <p> {l.location}</p>
                 <Link to={'/items/' + l.id}><button>Ver detalle</button></Link> 
@@ -41,7 +42,7 @@ class Products extends Component {
         </div>)
         return (
             <div>
-                <Navbar></Navbar>
+                <Navbar/>
                 <ul className="items">
                     {productos}
                 </ul>
