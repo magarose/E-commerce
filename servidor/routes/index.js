@@ -67,8 +67,8 @@ router.get('/api/items', function (req, res) {
                    title: product.title,
                    price: {
                      currency: product.currency_id,
-                     amount: String(product.price.amount).split('.')[0],
-                     decimals:String(product.price.decimals).split('.')[1] || '0',
+                     amount: String(product.price).split('.')[0],
+                     decimals:String(product.price).split('.')[1] || '0',
                    },
                    picture: product.thumbnail,
                    condition: product.condition,

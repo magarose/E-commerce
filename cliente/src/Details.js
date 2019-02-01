@@ -53,7 +53,11 @@ class Details extends Component {
                             </span>
                             </p>
                         </div>
-                        <h2>$ {this.state.product.price.amount} , {this.state.product.price.decimals} </h2>
+                        <h2>$ {this.state.product.price.amount} 
+                        {(this.state.product.price.decimals == 0) && <sup className="single-product-decimals">  00</sup>}
+                        {(this.state.product.price.decimals != 0) &&
+                        <sup className="single-product-decimals">{this.state.product.price.decimals} </sup>}
+                             </h2>
                         <div className='btn'>
                         <Link to={'/'}><button>Comprar</button></Link>
                         </div>
