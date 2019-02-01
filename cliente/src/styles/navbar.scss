@@ -1,0 +1,35 @@
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#bc3b69;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    img{
+    width: 40px;
+    height: 40px;
+    }
+    .form{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 3%;
+    background-color: white;
+    border-radius: 5px;
+    margin-left: 3%;
+        input{  
+            width: 99%;
+            height: 50%;
+            border: none;
+            }
+        button{
+           background-color: silver;
+           border-radius: 10%;
+               img{
+                 font-size: 20px;
+               }
+           }
+    }
+}
