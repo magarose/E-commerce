@@ -3,6 +3,7 @@ import { BrowserRouter, Route} from 'react-router-dom';
 import Products from './Products';
 import Details from './Details';
 import Navbar from './Navbar';
+import './styles/app.css'
 
 class App extends Component {
   // constructor(props) {
@@ -11,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-      <div>
+      <div className = 'app'>
         <Route exact path="/" component={Navbar} />
         <Route exact path="/items/" component={Products} />
         <Route exact path="/items/:id" component={Details} />

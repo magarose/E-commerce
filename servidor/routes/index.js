@@ -61,7 +61,7 @@ router.get('/api/items', function (req, res) {
            })
            .then(resultCategory => {
                let resultProduct = {
-                 categories:[resultCategory.data.path_from_root],
+                 categories:resultCategory.data.path_from_root,
                  item: {
                    id: product.id,
                    title: product.title,

@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Sarabun');
+
+body{
+    background-color: pink;
 nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 3%;
     background-color:#bc3b69;
     padding-left: 25%;
     padding-right: 25%;
@@ -14,8 +19,8 @@ nav{
     .form{
     display: flex;
     align-items: center;
-    width: 80%;
     height: 3%;
+    width: 90%;
     background-color: white;
     border-radius: 5px;
     margin-left: 3%;
@@ -23,13 +28,17 @@ nav{
             width: 99%;
             height: 50%;
             border: none;
+            font-family: 'Sarabun', sans-serif;
+            font-size: 20px;
             }
         button{
            background-color: silver;
            border-radius: 10%;
-               img{
-                 font-size: 20px;
-               }
+           .search{
+               padding: 2%;
+           }
+            
            }
     }
+}
 }

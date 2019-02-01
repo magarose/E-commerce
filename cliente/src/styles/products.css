@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+.breadcrumb {
+  font-family: "Sarabun", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  margin: 5%;
+}
+
+.list {
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  margin-top: 1%;
+  width: 75%;
+  height: 50%;
+  border-radius: 10px;
+  margin-left: 15%;
+  padding-bottom: 3%;
+}
+.list .productos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2%;
+  border-bottom: solid 2px silver;
+  padding-bottom: 1%;
+}
+.list .productos .pic {
+  width: 25%;
+}
+.list .productos .pic img {
+  width: 120px;
+  height: 120px;
+}
+.list .productos .data {
+  width: 25%;
+  margin-left: -20%;
+}
+.list .productos .data .price {
+  font-size: 22px;
+  font-weight: bold;
+}
+.list .productos .data .price .free {
+  margin-left: 20%;
+}
+.list .productos .data .price .free img {
+  width: 25px;
+  height: 25px;
+  margin-top: 2%;
+}
+.list .productos .data .price .title {
+  font-size: 17px;
+}
+.list .productos .detail {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-right: -10%;
+  align-items: center;
+}
+.list .productos .detail button {
+  background-color: pink;
+  border: solid, black 1px;
+  width: 80px;
+  height: 8%;
+  padding: 2%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=products.css.map */

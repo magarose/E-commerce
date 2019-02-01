@@ -1,37 +1,44 @@
-nav {
+@import url("https://fonts.googleapis.com/css?family=Sarabun");
+body {
+  background-color: pink;
+}
+body nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 3%;
   background-color: #bc3b69;
   padding-left: 25%;
   padding-right: 25%;
   padding-top: 3%;
   padding-bottom: 3%;
 }
-nav img {
+body nav img {
   width: 40px;
   height: 40px;
 }
-nav .form {
+body nav .form {
   display: flex;
   align-items: center;
-  width: 80%;
   height: 3%;
+  width: 90%;
   background-color: white;
   border-radius: 5px;
   margin-left: 3%;
 }
-nav .form input {
+body nav .form input {
   width: 99%;
   height: 50%;
   border: none;
+  font-family: "Sarabun", sans-serif;
+  font-size: 20px;
 }
-nav .form button {
+body nav .form button {
   background-color: silver;
   border-radius: 10%;
 }
-nav .form button img {
-  font-size: 20px;
+body nav .form button .search {
+  padding: 2%;
 }
 
 /*# sourceMappingURL=navbar.css.map */

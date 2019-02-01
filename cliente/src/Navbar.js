@@ -27,12 +27,12 @@ class Navbar extends Component {
 
             <nav>
                 <div className='Logo'>
-                    <img src={adaIcon} />
+                    <img alt='' src={adaIcon} />
                 </div>
                 <div className="form">
                     <input type='text' placeholder='Nunca dejes de buscar' value={this.state.textValue} onChange={this.handleInputOnChange}>
                     </input><button>
-                        <Link to={url}><img src={search}/></Link>
+                        <Link to={url}><img className='search' alt = ''src={search}/></Link>
                     </button>
                 </div>
 
