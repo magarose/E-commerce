@@ -1,2 +1,4 @@
-# tpFINAL
-Trabajo Practico final de ADA, en React y Node.js (en proceso)
+# E- commerce
+E-commerce app using Mercado Libre APIs. Client folder made with React, and server folder made with Express.
+
+
