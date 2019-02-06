@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Sarabun");
-.breadcrumb {
+.details .breadcrumb {
+  width: 75%;
   font-family: "Sarabun", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  display: inline;
-  margin: 4%;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  margin: auto;
 }
-
-.datos {
+.details .breadcrumb p:last-of-type span {
+  display: none;
+}
+.details .datos {
   background-color: white;
   display: flex;
   margin: 5%;
@@ -19,17 +25,17 @@
   padding: 2%;
   font-family: "Sarabun", sans-serif;
 }
-.datos .descripcion {
+.details .datos .description {
   margin-top: 5%;
   width: 60%;
   padding-left: 5%;
   padding-right: 0px;
   margin-right: 0px;
 }
-.datos .descripcion h3 {
+.details .datos .description h3 {
   font-size: 25px;
 }
-.datos .descripcion p {
+.details .datos .description p {
   display: flex;
   text-align: justify;
   width: 80%;
@@ -38,12 +44,12 @@
   font-weight: bold;
   color: grey;
 }
-.datos .descripcion img {
+.details .datos .description img {
   width: 400px;
   height: 400p;
 }
-.datos .comprar {
-  margin-top: 5%;
+.details .datos .comprar {
+  margin-top: 2%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -51,15 +57,18 @@
   width: 40%;
   font-size: 25px;
 }
-.datos .comprar .new {
+.details .datos .comprar .new {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.datos .comprar .new img {
-  width: 25px;
-  width: 25px;
+.details .datos .comprar .new span img {
+  width: 35px;
+  width: 35px;
 }
-.datos .comprar .btn button {
+.details .datos .comprar .price {
+  margin: 0px;
+}
+.details .datos .comprar .btn button {
   width: 99%;
   margin-top: 2%;
   background-color: blue;
@@ -72,7 +81,7 @@
   font-size: 30px;
   cursor: pointer;
 }
-.datos .comprar .btn :hover {
+.details .datos .comprar .btn :hover {
   background-color: darkmagenta;
 }
 

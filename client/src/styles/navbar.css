@@ -32,6 +32,7 @@ body nav .form input {
   border: none;
   font-family: "Sarabun", sans-serif;
   font-size: 20px;
+  outline: none;
 }
 body nav .form button {
   background-color: silver;

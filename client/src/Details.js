@@ -14,7 +14,7 @@ class Details extends Component {
             categories: [],
             isLoading: true
         }
-        
+
     }
     componentDidMount() {
         fetch('http://localhost:3001/api/items/' + this.props.match.params.id)
@@ -30,36 +30,39 @@ class Details extends Component {
 
     render() {
         if (this.state.isLoading) {
-            return <p>cargando...</p>
-          }
-          const breadcrumb = this.state.categories.map((p) =>
-          <div className ='breadcrumb'>{p.name}  > </div>
-          )
+            return <h1>Cargando...</h1>
+        }
+        const breadcrumb = this.state.categories.map((p) =>
+            <p>{p.name} <span> > </span> </p>
+        )
         return (
-            <div>
+            <div className='details'>
                 <Navbar />
-                {breadcrumb}
+                <div className='breadcrumb'>
+                    {breadcrumb}
+                </div>
                 <div className='datos'>
-                    <div className='descripcion'>
+                    <div className='description'>
                         <img alt='' src={this.state.product.picture}></img>
                         <h3>Descripcion del producto</h3>
                         <p> {this.state.product.description} </p>
                     </div>
                     <div className='comprar'>
                         <div className='new'>
-                            <p>{this.state.product.condition === "new" ? "Nuevo" : "Usado"}   - <span>{this.state.product.sold_quantity} vendidos </span> 
-                            <span className='free'>
-                                {this.state.product.free_shipping && <img alt='' src={truck}></img>}
-                            </span>
+                            <p>{this.state.product.condition === "new" ? "Nuevo" : "Usado"}   - <span>{this.state.product.sold_quantity} vendidos </span>
+                                <span className='free'>
+                                    {this.state.product.free_shipping && <img alt='' src={truck}></img>}
+                                </span>
                             </p>
                         </div>
-                        <h2>$ {this.state.product.price.amount} 
-                        {(this.state.product.price.decimals == 0) && <sup className="single-product-decimals">  00</sup>}
-                        {(this.state.product.price.decimals != 0) &&
-                        <sup className="single-product-decimals">{this.state.product.price.decimals} </sup>}
-                             </h2>
+                        <div className = 'price'>
+                        <h2>$ {this.state.product.price.amount}
+                            {(this.state.product.price.decimals == 0) && <sup> 00</sup>}
+                            {(this.state.product.price.decimals != 0) && <sup>{this.state.product.price.decimals}</sup>}
+                        </h2>
+                        </div>
                         <div className='btn'>
-                        <Link to={'/'}><button>Comprar</button></Link>
+                            <Link to={'/'}><button>Comprar</button></Link>
                         </div>
                     </div>
                 </div>

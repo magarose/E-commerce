@@ -1,68 +1,69 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
-.breadcrumb {
+.products .breadcrumb {
+  width: 75%;
   font-family: "Sarabun", sans-serif;
   font-size: 20px;
   font-weight: bold;
-  display: inline-block;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
-  margin: 5%;
+  margin: auto;
 }
-
-.list {
+.products .breadcrumb p:last-of-type span {
+  display: none;
+}
+.products .list {
   font-family: "Roboto Mono", monospace;
   background-color: white;
   display: flex;
   flex-direction: column;
-  margin: 5%;
-  margin-top: 1%;
   width: 75%;
   height: 50%;
   border-radius: 10px;
-  margin-left: 15%;
-  padding-bottom: 3%;
+  margin: auto;
+  margin-bottom: 5%;
+  padding: 2%;
 }
-.list .productos {
+.products .list .productos {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 2%;
   border-bottom: solid 2px silver;
   padding-bottom: 1%;
 }
-.list .productos .pic {
-  width: 25%;
+.products .list .productos .pic {
+  width: 34%;
 }
-.list .productos .pic img {
+.products .list .productos .pic img {
   width: 120px;
   height: 120px;
 }
-.list .productos .data {
-  width: 25%;
+.products .list .productos .data {
+  width: 33%;
   margin-left: -20%;
 }
-.list .productos .data .price {
+.products .list .productos .data .price {
   font-size: 22px;
   font-weight: bold;
 }
-.list .productos .data .price .free {
-  margin-left: 20%;
+.products .list .productos .data .price span img {
+  margin-left: 2%;
+  width: 30px;
+  height: 30px;
 }
-.list .productos .data .price .free img {
-  width: 25px;
-  height: 25px;
-  margin-top: 2%;
-}
-.list .productos .data .price .title {
+.products .list .productos .data .title {
   font-size: 17px;
 }
-.list .productos .detail {
-  width: 25%;
+.products .list .detail {
+  width: 33%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   margin-right: -10%;
   align-items: center;
 }
-.list .productos .detail button {
+.products .list .detail button {
   background-color: pink;
   border: solid, black 1px;
   width: 80px;
