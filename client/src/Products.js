@@ -68,8 +68,8 @@ class Products extends Component {
                 </div>
 
                 <div className='data'>
-                    <p className='price'>$ {l.price.amount} {(l.price.decimals == 0) && <sup> 00</sup>}
-                        {(l.price.decimals != 0) && <sup>{l.price.decimals} </sup>}
+                    <p className='price'>$ {l.price.amount} {(l.price.decimals === 0) && <sup> 00</sup>}
+                        {(l.price.decimals !== 0) && <sup>{l.price.decimals} </sup>}
                         <span>{l.free_shipping && <img alt='' src={truck}></img>} </span>
                         </p>
                         <p>{l.title}</p>

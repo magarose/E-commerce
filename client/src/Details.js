@@ -57,8 +57,8 @@ class Details extends Component {
                         </div>
                         <div className = 'price'>
                         <h2>$ {this.state.product.price.amount}
-                            {(this.state.product.price.decimals == 0) && <sup> 00</sup>}
-                            {(this.state.product.price.decimals != 0) && <sup>{this.state.product.price.decimals}</sup>}
+                            {(this.state.product.price.decimals === 0) && <sup> 00</sup>}
+                            {(this.state.product.price.decimals !== 0) && <sup>{this.state.product.price.decimals}</sup>}
                         </h2>
                         </div>
                         <div className='btn'>
